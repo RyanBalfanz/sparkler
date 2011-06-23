@@ -2,13 +2,13 @@
 	<div data-role="header" data-theme="b">
 		<a href="#device_list" data-role="button" data-direction="reverse" data-icon="back">Device List</a>
 		<h1>{{ device.shortDesc }}</h1>
-	</div><!-- /header --> 
+	</div><!-- /header -->
 	
 	<div data-role="content">
 		<div data-role="controlgroup">
 		{# <div data-role="controlgroup" data-type="horizontal"> #}
-			<a href="index.html" data-role="button">On</a>
-			<a href="index.html" data-role="button">Off</a>
+			<a href="{% url api-device-action device.id "on" %}" data-ajax="false" data-role="button">On</a>
+			<a href="{% url api-device-action device.id "off" %}" data-ajax="false" data-role="button">Off</a>
 		</div>
 	</div><!-- /content -->
 	

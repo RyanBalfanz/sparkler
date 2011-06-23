@@ -12,12 +12,12 @@ urlpatterns = patterns('',
 			queryset=Device.objects.order_by('house'),
 			template_name='controller/index.html',
 			context_object_name='device_list'),
-		name='device_list'),
-	url(r'^(?P<pk>\d+)/$',
-		DetailView.as_view(
-			model=Device,
-			template_name='controller/device_detail.html'),
-		name='device_detail'),
+		name='device-list'),
+	# url(r'^(?P<pk>\d+)/$',
+	# 	DetailView.as_view(
+	# 		model=Device,
+	# 		template_name='controller/device_detail.html'),
+	# 	name='device-detail'),
 	# (r'^(?P<houseCode>\w{1})/(?P<unitCode>\d{1})/$', 'sparkler.controller.views.device_detail'),
 	# (r'^(?P<houseCode>\w{1})/(?P<unitCode>\d{1})/$', 'sparkler.controller.views.device_detail'),
 )
