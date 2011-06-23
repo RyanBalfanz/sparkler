@@ -2,12 +2,15 @@
 	<div data-role="header" data-theme="b">
 		<h1>Device List</h1>
 		<a href="#options" data-icon="gear" class="ui-btn-right">Options</a>
+		<a href="http://127.0.0.1:8000/admin/" rel="external" data-icon="gear" class="ui-btn-left">Admin</a>
 	</div><!-- /header -->
 	
 	<div data-role="content">
 		<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="f" data-filter="true"> 
 			{% for device in device_list %}
-				{% ifchanged device.house %}<li data-role="list-divider" data-theme="a">House {{device.house}}</li>{% endifchanged %}
+				{% ifchanged device.house %}
+					<li data-role="list-divider" data-theme="a">House {{device.house}}</li>
+				{% endifchanged %}
 				<li>
 					<a href="#device_detail__{{ device.slug }}" data-transition="slide">
 						Device ({{ device.house }}{{ device.unit }}): {{ device.shortDesc }}
