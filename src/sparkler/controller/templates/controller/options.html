@@ -1,0 +1,33 @@
+<div data-role="page" id="options">
+	<div data-role="header" data-theme="b">
+		<a href="#device_list" data-role="button" data-direction="reverse" data-icon="back">Device List</a>
+		<h1>Options</h1>
+	</div><!-- /header -->
+	
+	<div data-role="content">
+		<div data-role="fieldcontain">
+			<label for="select-choice-1" class="select">Choose shipping method:</label>
+			<select name="select-choice-1" id="select-choice-1">
+				<option value="standard">Standard: 7 day</option>
+				<option value="rush">Rush: 3 days</option>
+				<option value="express">Express: next day</option>
+				<option value="overnight">Overnight</option>
+			</select>
+		</div>
+		<div data-role="fieldcontain">
+		 	<fieldset data-role="controlgroup">
+				<legend>Agree to the terms:</legend>
+				<input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" />
+				<label for="checkbox-1">I agree</label>
+		    </fieldset>
+		</div>
+		<div data-inline="true">
+			<a href="#device_list" data-direction="reverse" data-role="button">Cancel</a>
+			<a href="#device_list" data-direction="reverse" data-role="button" data-theme="b">Save</a>
+		</div>
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="b">
+		<h4>Options</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->

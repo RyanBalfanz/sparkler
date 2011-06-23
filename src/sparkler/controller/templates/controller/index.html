@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block body %}
+	{% include "controller/device_list.html" %}
+	{% for device in device_list %}
+		{% include "controller/device_detail.html" %}
+	{% endfor %}
+	{% include "controller/options.html" %}
+	{% include "controller/about.html" %}
+{% endblock body %}

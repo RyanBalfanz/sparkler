@@ -1,0 +1,23 @@
+<div data-role="page" id="device_list">
+	<div data-role="header" data-theme="b">
+		<h1>Device List</h1>
+		<a href="#options" data-icon="gear" class="ui-btn-right">Options</a>
+	</div><!-- /header -->
+	
+	<div data-role="content">
+		<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="f" data-filter="true"> 
+			{% for device in device_list %}
+				{% ifchanged device.house %}<li data-role="list-divider" data-theme="a">House {{device.house}}</li>{% endifchanged %}
+				<li>
+					<a href="#device_detail__{{ device.slug }}" data-transition="slide">
+						Device ({{ device.house }}{{ device.unit }}): {{ device.shortDesc }}
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="b">
+		<h4>Device List</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
