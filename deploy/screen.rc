@@ -1,0 +1,2 @@
+chdir ./src/sparkler
+screen -t 'srv' 1 python manage.py runserver ryans-mac-mini.local:8010
