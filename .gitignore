@@ -1,3 +1,5 @@
 *.db
 *.pyc
 *.DS_STORE
+*.pyc
+
