@@ -1,7 +1,7 @@
 <div data-role="page" id="device_detail__{{ device.slug }}"> 
 	<div data-role="header" data-theme="b">
-		<a href="#device_list" data-role="button" data-direction="reverse" data-icon="back">Device List</a>
-		<h1>{{ device.shortDesc }}</h1>
+		<a href="#device_list" data-role="button" data-direction="reverse" data-icon="home">Home</a>
+		<h1>{{ device.house }}{{ device.unit }}</h1>
 	</div><!-- /header -->
 	
 	<div data-role="content">
@@ -12,7 +12,7 @@
 		</div>
 	</div><!-- /content -->
 	
-	<div data-role="footer" data-theme="b">
-		<h4>Boom!</h4>
-	</div><!-- /footer -->
+	{# <div data-role="footer" data-theme="b"> #}
+	{# 	<h4>Boom!</h4> #}
+	{# </div><!-- /footer --> #}
 </div><!-- /page -->
