@@ -122,6 +122,8 @@ INSTALLED_APPS = (
 	'core',
 	'controller',
 	'piston',
+	'constance',
+	'constance.backends.database',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -145,4 +147,18 @@ LOGGING = {
 			'propagate': True,
 		},
 	}
+}
+
+# django-constance
+# CONSTANCE_BACKEND = 'constance.backends.redisd.RedisBackend'
+# CONSTANCE_REDIS_CONNECTION = {
+# 	'host': 'localhost',
+# 	'port': 6379,
+# 	'db': 0,
+# }
+
+CONSTANCE_BACKEND = 'constance.backends.database.DatabaseBackend'
+
+CONSTANCE_CONFIG = {
+	'SPEAK_COMMAND': (True, 'Voice commands before execution'),
 }
