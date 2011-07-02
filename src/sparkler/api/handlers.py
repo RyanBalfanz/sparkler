@@ -1,6 +1,6 @@
 import subprocess
 from piston.handler import BaseHandler
-from piston.utils import rc
+from piston.utils import rc, throttle
 
 from sparkler.controller.models import Device
 from sparkler.utils import firecracker
@@ -11,6 +11,7 @@ class DeviceHandler(BaseHandler):
 	allowed_methods = ('GET',)
 	model = Device
 
+	@throttle(5, 10*60)
 	def read(self, request, device_id=None, action=None):
 		"""
 		Returns a single device if `device_id` is given,
